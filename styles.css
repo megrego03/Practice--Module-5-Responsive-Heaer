@@ -1,0 +1,14 @@
+:root { --brand:#8c1d40; --accent:#ffc627; --ink:#191919; --paper:#fff; --space:1rem; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:Arial,sans-serif; color:var(--ink); }
+.skip-link { position:absolute; top:-5rem; left:.5rem; z-index:10; background:var(--paper); padding:.75rem; }
+.skip-link:focus { top:.5rem; }
+.site-header { padding:var(--space); background:var(--brand); color:var(--paper); }
+.brand { color:inherit; font-size:1.2rem; font-weight:700; }
+.menu-button { /* TODO: style a comfortable, visible target. */ }
+.nav-list { list-style:none; margin:.75rem 0 0; padding:0; /* TODO: narrow layout. */ }
+.nav-list a { display:block; color:var(--paper); padding:.75rem; }
+/* TODO: hover, focus-visible, active, and current-page states. */
+/* TODO: hide the collapsed list only after JS adds the .js class. */
+main { max-width:65rem; margin:auto; padding:1rem; }
+/* TODO: add one content-driven, relative-unit breakpoint and wide layout. */
