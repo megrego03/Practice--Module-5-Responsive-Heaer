@@ -7,13 +7,25 @@ button.hidden = false;
 button.setAttribute("aria-expanded", "false");
 
 // TODO 2: create one function that synchronizes aria-expanded and visible state.
-function setMenuState(isOpen){
+function setMenuState(isOpen) {
     button.setAttribute("aria-expanded", String(isOpen));
     list.hidden = !isOpen;
 }
 
-// TODO 3: toggle that function when the native button is activated.
+setMenuState(false);
 
+// TODO 3: toggle that function when the native button is activated.
+button.addEventListener("click", function () {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+});
 
 // TODO 4: when Escape is pressed while open, close and return focus to the button.
+document.addEventListener("keydown", function (event) {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
 
+    if (event.key === "Escape" && isOpen) {
+        setMenuState(false);
+        button.focus();
+    }
+});

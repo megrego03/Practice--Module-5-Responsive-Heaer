@@ -82,6 +82,9 @@ body {
 }
 
 /* TODO: hide the collapsed list only after JS adds the .js class. */
+.js .nav-list[hidden] {
+    display:none;
+}
 
 main {
     max-width:65rem;
@@ -90,9 +93,17 @@ main {
 }
 
 /* TODO: add one content-driven, relative-unit breakpoint and wide layout. */
-@media (min-width:33.75rem){
+@media (min-width:33.75rem) {
+    .menu-button {
+        display:none;
+    }
+
     .nav-list {
-        display: flex;
-        margin: 0;
+        display:flex;
+        margin:0;
+    }
+
+    .js .nav-list[hidden] {
+        display:flex;
     }
 }
