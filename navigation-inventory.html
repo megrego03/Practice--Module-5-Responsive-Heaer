@@ -65,9 +65,13 @@
             </table>
 
             <h2>Breakpoint observation</h2>
-            <p><strong>First observed failure:</strong> [Describe crowding, wrapping, or overlap.]</p>
-            <p><strong>Observed width:</strong> [px]</p>
-            <p><strong>Chosen relative-unit breakpoint:</strong> [rem/em]</p>
+            <p><strong>First observed failure:</strong> During a temporary horizontal flex test in DevTools, the "My Account" navigation label still wrapped at 535px.</p>
+            <p><strong>Observed width:</strong> 540px was the first tested width where all navigation labels fit on one line without wrapping.</p>
+            <p><strong>Chosen relative-unit breakpoint:</strong> 33.75rem</p>
+            <ul>
+                <li>1rem = 16px</li>
+                <li>540 &divide; 16 = 33.75</li>
+            </ul>
 
             <h2>JavaScript explanation</h2>
             <p>[Explain each logical step in your own words.]</p>
